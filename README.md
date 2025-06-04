@@ -1,1 +1,1 @@
-# intellectika-
+# intellectika
