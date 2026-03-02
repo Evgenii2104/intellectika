@@ -1,0 +1,90 @@
+.landing-wrapper {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #f2f4ff, #ffffff);
+  text-align: center;
+  gap: 20px;
+}
+
+.tagline {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 360px;
+  padding: 32px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.oauth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    background: #f8f9ff;
+  }
+}
+
+.divider {
+  position: relative;
+  margin: 10px 0;
+  font-size: 12px;
+  color: #aaa;
+
+  span {
+    background: white;
+    padding: 0 10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: #eee;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+  }
+}
+
+.email-btn {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #4c6fff, #8f5cff);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}

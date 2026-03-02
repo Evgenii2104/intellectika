@@ -1,0 +1,57 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+
+    <h1>Create Account</h1>
+    <p class="subtitle">
+      Your AI companion is ready to listen.
+    </p>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" formControlName="email" placeholder="you@example.com" />
+
+        @if (form.controls.email.touched && form.controls.email.invalid) {
+          <small>Please enter a valid email.</small>
+        }
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="Minimum 8 characters" />
+
+        @if (form.controls.password.touched && form.controls.password.invalid) {
+          <small>Password must be at least 8 characters.</small>
+        }
+      </div>
+
+      <!-- Checkbox -->
+      <div class="checkbox-group">
+        <input type="checkbox" formControlName="agree" />
+        <span>I understand this is not a medical service.</span>
+      </div>
+
+      @if (form.controls.agree.touched && form.controls.agree.invalid) {
+        <small class="error-text">
+          You must agree before continuing.
+        </small>
+      }
+
+      @if (error()) {
+        <div class="error">
+          {{ error() }}
+        </div>
+      }
+
+      <button
+        type="submit"
+        class="primary-btn"
+        [disabled]="loading()"
+      >
+        {{ loading() ? 'Creating...' : 'Create Account' }}
+      </button>
+
+    </form>
+  </div>
+</div>

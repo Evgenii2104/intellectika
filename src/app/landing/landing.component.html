@@ -1,0 +1,31 @@
+<div class="landing-wrapper">
+
+  <app-lumen-logo></app-lumen-logo>
+
+  <p class="tagline">
+    Your AI companion for mental clarity.
+  </p>
+
+  <div class="card">
+
+    <button class="oauth google" (click)="loginWithGoogle()">
+      <img src="assets/google.svg" alt="Google" />
+      Continue with Google
+    </button>
+
+    <button class="oauth apple" (click)="loginWithApple()">
+      <img src="assets/apple.svg" alt="Apple" />
+      Continue with Apple
+    </button>
+
+    <div class="divider">
+      <span>or</span>
+    </div>
+
+    <button class="email-btn" (click)="loginWithEmail()">
+      Sign up with Email
+    </button>
+
+  </div>
+
+</div>
